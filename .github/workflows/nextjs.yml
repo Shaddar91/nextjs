@@ -47,6 +47,8 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx      
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
