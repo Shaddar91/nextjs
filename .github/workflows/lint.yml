@@ -7,5 +7,19 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install modules
       run: yarn
-    - name: Run ESLint
-      run: yarn install && yarn run eslint . --ext .js,.jsx,.ts,.tsx
+    # - name: Run ESLint
+    #   run: yarn install && yarn run eslint . --ext .js,.jsx,.ts,.tsx
+    - run: "echo $ZEC"
+      shell: bash
+      env:
+        ZEC: ${{secrets.ZEC}}      
+
+
+  # security:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - name: Run Snyk to check for vulnerabilities
+  #       uses: snyk/actions/node@master
+  #       env:
+  #         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
