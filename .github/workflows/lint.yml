@@ -25,3 +25,5 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - name: check config
+        run: cat yarn.lock |grep snyk
