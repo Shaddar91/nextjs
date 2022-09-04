@@ -14,11 +14,10 @@ jobs:
       env:
         ZEC: ${{secrets.ZEC}}      
 
-
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
