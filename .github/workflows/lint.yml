@@ -47,11 +47,4 @@ jobs:
             GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
             GITGUARDIAN_API_KEY: ${{ secrets.TOMZI }}
 
-
-  # repos:
-  # -   repo: https://github.com/Yelp/detect-secrets
-  #     rev: v1.3.0
-  #     hooks:
-  #     -   id: detect-secrets
-  #         args: ['--baseline', '.secrets.baseline']
-  #         exclude: package.lock.json
+ 
